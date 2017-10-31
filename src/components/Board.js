@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import '../css/index.css';
 import {Square} from './functions.js'
 
 class Board extends React.Component {

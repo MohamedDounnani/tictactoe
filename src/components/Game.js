@@ -1,12 +1,12 @@
 import React from 'react';
-import './index.css';
+import '../css/index.css';
 import Board from './Board.js'
 import {calculateWinner,
         restartGame,
         handleClick,
         jumpTo,
         handleChange
-        } from './functions.js'
+      } from './functions.js'
 import Radio from './Radio.js'
 
 class Game extends React.Component {
