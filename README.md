@@ -50,8 +50,8 @@ Clonare la cartella -> aprire il terminale e digitare i seguenti comandi:
 
 ## Come avviarla:
 Sempre da terminale digitare il seguente comando:
-- yarn start facendo attenzione a non avere la porta 3000 occupata
-Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app. 
+- yarn start
+Facendo attenzione a non avere la porta 3000 occupata. Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app. 
 	
  
 
