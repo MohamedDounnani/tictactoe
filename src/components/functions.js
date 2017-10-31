@@ -26,8 +26,8 @@ export const calculateWinner = squares =>{
 export const  Square = props => {
     return (
       <button className="square" onClick=
-      {props.onClick} style={{backgroundColor: props.color,
-                              color : props.checked}}>
+      {props.onClick} style={{backgroundColor: props.background_color,
+                              color : props.color}}>
 
       {props.value}
       </button>
@@ -38,11 +38,11 @@ export const restartGame = (object) =>{
   object.setState({
     history: [{
       squares: Array(9).fill(null),
-      color : Array(9).fill("white"),
+      background_color: Array(9).fill("white"),
     }],
     stepNumber: 0,
     xIsNext: true,
-    checked : "black",
+    color : "black",
     //color_x_o: "black",
   });
 }
@@ -52,7 +52,7 @@ export const handleClick = (i,object) =>{
     object.state.stepNumber +1);
   const current = history[history.length -1];
   const squares = current.squares.slice();
-  const color = current.color.slice();
+  const background_color = current.background_color.slice();
   const colored_squares = calculateWinner(squares);
   if(colored_squares || squares[i] ){
     return;
@@ -63,7 +63,7 @@ export const handleClick = (i,object) =>{
       history: history.concat([
         {
           squares : squares,
-          color : color
+          background_color : background_color
         }
       ]) ,
       stepNumber: history.length,
@@ -79,6 +79,6 @@ export const jumpTo = (step,object) =>{
 
 export const handleChange = (changeEvent,object) =>{
   object.setState({
-    checked : changeEvent.target.value
+    color : changeEvent.target.value
   });
 }

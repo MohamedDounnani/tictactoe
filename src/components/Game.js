@@ -14,11 +14,11 @@ class Game extends React.Component {
     super(props);
     this.state = {history: [{
       squares: Array(9).fill(null),
-      color : Array(9).fill("white"),
+      background_color : Array(9).fill("white"),
     }],
     stepNumber: 0,
     xIsNext: true,
-    checked : "black",
+    color : "black",
     //color_x_o: "black",
   };
   }
@@ -33,7 +33,7 @@ class Game extends React.Component {
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const color = current.color;
+    const background_color = current.background_color;
     const winner = calculateWinner(current.squares);
     const length = current.squares.length;
     let full = 0; //variabile che tiene in memoria quanti squares sono riempiti
@@ -57,7 +57,7 @@ class Game extends React.Component {
 
     if(winner){
       for(let i=0; i<winner[0].length; i++){
-          color[winner[0][i]] = "green";
+        background_color[winner[0][i]] = "green";
       }
       disable  = false;
       status = 'The winner is: ' + winner[1][0] ;
@@ -79,8 +79,8 @@ class Game extends React.Component {
           <Board
           squares={current.squares}
           onClick={(i) => handleClick(i,this)}
-           color={current.color}
-           checked={this.state.checked}/>
+           background_color={current.background_color}
+           color={this.state.color}/>
         </div>
         <div className="game-info">
 
@@ -90,7 +90,7 @@ class Game extends React.Component {
           </div>
           <div>
           Choose Color:
-        <Radio checked={this.state.checked}
+        <Radio color={this.state.color}
                onChange={(changeEvent) => handleChange(changeEvent,this)}
                submit={(formSubmitEvent) => this.handleSubmit(formSubmitEvent)}
         />

@@ -8,19 +8,19 @@ class Radio extends React.Component{
       <form /*onSubmit={this.props.submit}*/>
         <div className="radio">
           <label>
-            <input type="radio" checked={this.props.checked==="red"} value="red" onChange={this.props.onChange} />
+            <input type="radio" checked={this.props.color==="red"} value="red" onChange={this.props.onChange} />
             Red
           </label>
         </div>
         <div className="radio">
           <label>
-            <input type="radio" checked={this.props.checked==="blue"} value="blue" onChange={this.props.onChange} />
+            <input type="radio" checked={this.props.color==="blue"} value="blue" onChange={this.props.onChange} />
             Blue
           </label>
         </div>
         <div className="radio">
           <label>
-            <input type="radio" checked={this.props.checked==="black"} value="black" onChange={this.props.onChange}/>
+            <input type="radio" checked={this.props.color==="black"} value="black" onChange={this.props.onChange}/>
             Black
           </label>
         </div>
