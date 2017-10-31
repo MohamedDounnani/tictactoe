@@ -2,6 +2,16 @@ import React from 'react';
 import '../css/index.css';
 import {Square} from './functions.js'
 
+
+
+/*
+Classe che si occupa di formare il campo(9 quadrati)
+Nel render richiamo una funzione che per ogni "quadrato" creato si occupa di passare dei paramentre a <Square />, nello specifico:
+- value: value corrente del simbolo che viene preso da squares ricevuto da Game
+- backgroud-color: tiene sotto controllo il backgourd-color e al momento opportuna(alla vittoria) viene cambiato
+- color: colore corrente del simbolo
+*/
+
 class Board extends React.Component {
   renderSquare(i) {
     return (

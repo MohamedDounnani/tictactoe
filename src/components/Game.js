@@ -9,6 +9,20 @@ import {calculateWinner,
       } from './functions.js'
 import Radio from './Radio.js'
 
+/*
+La classe padre, in cui setto lo stato iniziale composto da
+-History: un buffer che tiene in memoria tutte le fasi della partita, composto da, squares(array di 9 elementi) e background-color(array di 9 elementi che tiene il backgound-color di 			 squares)
+-stepNumber: una varibiale che tiene conto dell'avanzamento della partita, inizializzata a 0
+-xIsNext : una variabile booleana inizializzata a true, che tiene conto dei torni. Se true tocca a X se false tocca a O
+-checked : una variabile stringa in cui memorizzo il colore dei simboli, inizializzato a black che è il colore di default
+
+Nel render vi sono le seguenti componenti:
+- status, una variabile che si aggiorna dipendentemente dalla situazione. Segnala il turno dei giocatori, il vincitore o la situazione di stallo. Attraverso delle opportune verifiche
+- Board (componente figlio) e gli passo dei parametri, Squares, color e checked.
+- Button reset che richiama la funzione restartGame presente in './functions.js'
+- Radio button che richiama la funzione handleSubmit presente in './functions.js'
+*/
+
 class Game extends React.Component {
   constructor(props){
     super(props);

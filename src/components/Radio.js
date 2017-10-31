@@ -1,5 +1,9 @@
 import React from 'react';
 
+/*
+  Classe che si occupa di creare il radio button e riceve dalla classe padre quale opzione è selezionata tramite la funzione onChange
+*/
+
 class Radio extends React.Component{
 
 
