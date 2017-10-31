@@ -59,7 +59,9 @@ Dev:
 			  
 		-restartGame: Riceve come paramentro l'istanza corrente e si occupa semplicemente di settare lo stato alle condizioni iniziali. Viene triggerato dal Reset button
 	
-		-handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente 					all'interno del Board. In una situazione in cui l'utente clicca su un quadrato già occupato da un simbolo non succede nulla in quanto non è permesso modificare le mosse.
+		-handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente 
+
+			      all'interno del Board. In una situazione in cui l'utente clicca su un quadrato già occupato da un simbolo non succede nulla in quanto non è permesso modificare le mosse.
 			      In una situazione di vittoria non è possibile proseguire. Inoltre ad ogni click, il buffer History ingloba la nuova fase della partita.
 	
 		-jumpTo: Riceve come paramentro iniziale la fase della partita desiderata e si occupa di far vedere attraverso una modifica dello stato, la fase desiderata.
