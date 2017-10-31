@@ -30,7 +30,7 @@ Ho sviluppato il codice modularmente, assegnando ad ogni componente una sua spec
 	- Functions.js: sono presenti tutte le funzioni di appoggio che utilizzo per far funzionare il programma.	    
 
 ## Come funziona:
-Ituitivamente è molto facile in quanto si rifà al famoso gioco TicTacToe. La schermata principale è composta da status, campo , storia e scelta dei colori.	
+Ituitivamente è molto facile in quanto si rifà al famoso gioco TicTacToe. La schermata principale è composta da status, campo, storia e scelta dei colori.	
 - Status: Vengono visualizzati a seconda della situazione, il turno dei giocatori, il simbolo del giocatore vincente e la scritta "Premi reset" nella situazione di stallo.
 - Campo: viene visualizzato il campo vero e proprio, attraverso un click in uno dei quadrati viene posto un simbolo X,O dipendentemente dal turno. In caso ci sia un vincitore vengono illuminate
 le mosse vincenti.	
