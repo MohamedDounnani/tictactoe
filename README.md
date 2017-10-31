@@ -43,34 +43,34 @@ Nel render vi sono le seguenti componenti:
 
 Board.js: Una classe che si occupa di formare il campo(9 quadrati)
 Nel render richiamo una funzione che per ogni "quadrato" creato si occupa di passare dei paramentre a <Square />, nello specifico:
--value: value corrente del simbolo che viene preso da squares ricevuto da Game
--backgroud-color: tiene sotto controllo il backgourd-color e al momento opportuna(alla vittoria) viene cambiato
--color: colore corrente del simbolo
+- value: value corrente del simbolo che viene preso da squares ricevuto da Game
+- backgroud-color: tiene sotto controllo il backgourd-color e al momento opportuna(alla vittoria) viene cambiato
+- color: colore corrente del simbolo
 
 
 functions.js: sono presenti tutte le funzioni che utilizzo per far funzionare il programma.		
 	    
--calculateWinner: Riceve come paramentro di input la fase corrente di gioco (squares) e controlla se c'è un vincitore. La variabile di controllo consiste in un array in cui si sono
+- calculateWinner: Riceve come paramentro di input la fase corrente di gioco (squares) e controlla se c'è un vincitore. La variabile di controllo consiste in un array in cui si sono
 tutti i possibili esiti di vittoria. Se nella fase corrente è presente un esito viene salvato in un'altro array insieme al simbolo vincente e viene mandato in output 
 quest'ultimo.		 
--Squares: Riceve come paramentro di input i paramentri descritti nella spiegazione di Board e per ognuno di essi viene correllato nella sua funzione.			  
--restartGame: Riceve come paramentro l'istanza corrente e si occupa semplicemente di settare lo stato alle condizioni iniziali. Viene triggerato dal Reset button	
--handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente nel board. 
+- Squares: Riceve come paramentro di input i paramentri descritti nella spiegazione di Board e per ognuno di essi viene correllato nella sua funzione.			  
+- restartGame: Riceve come paramentro l'istanza corrente e si occupa semplicemente di settare lo stato alle condizioni iniziali. Viene triggerato dal Reset button	
+- handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente nel board. 
 In una situazione in cui l'utente clicca su un quadrato già occupato da un simbolo non succede nulla in quanto non è permesso modificare le mosse.
 In una situazione di vittoria non è possibile proseguire. Inoltre ad ogni click, il buffer History ingloba la nuova fase della partita.	
--jumpTo: Riceve come paramentro iniziale la fase della partita desiderata e si occupa di far vedere attraverso una modifica dello stato, la fase desiderata.	
--handleChange: Una funzione che riceve come paramentri iniziali ChangeEvent(triggerato dal radio button) e l'istanza. Si occupa di modificare l'elemento color presente nello stato.
+- jumpTo: Riceve come paramentro iniziale la fase della partita desiderata e si occupa di far vedere attraverso una modifica dello stato, la fase desiderata.	
+- handleChange: Una funzione che riceve come paramentri iniziali ChangeEvent(triggerato dal radio button) e l'istanza. Si occupa di modificare l'elemento color presente nello stato.
 In base al colore ricevuto dal radio button il checked cambia il suo valore rispetto ad esso.
 
 
 
 ## Come funziona:
 Ituitivamente è molto facile in quanto si rifà al famoso gioco tictactoe. La schermata principale è composta da status, campo , storia e scelta dei colori.	
--Status: viene visualizzato il turno dei giocatori, quando un giocatore vince il simbolo del giocatore e la scritta Premi reset nella situazione di stallo.
--Campo: viene visualizzato il campo vero e proprio, attraverso un click in uno dei quadrati viene posto un simbolo X,O dipendentemente dal turno. In caso ci sia un vincitore vengono illuminate
+- Status: viene visualizzato il turno dei giocatori, quando un giocatore vince il simbolo del giocatore e la scritta Premi reset nella situazione di stallo.
+- Campo: viene visualizzato il campo vero e proprio, attraverso un click in uno dei quadrati viene posto un simbolo X,O dipendentemente dal turno. In caso ci sia un vincitore vengono illuminate
 le mosse vincenti.	
--Storia: Si può tornare indietro nel tempo in base allo step desiderato. Ed è presente il tasto reset, abilitato solo in caso di vittoria o stallo.	
--Scelta colori: E' possibile impostare i colori dei simboli. Non è presente un pulsante submit in quanto non ho ritenuto necessaria questa aggiunta. 
+- Storia: Si può tornare indietro nel tempo in base allo step desiderato. Ed è presente il tasto reset, abilitato solo in caso di vittoria o stallo.	
+- Scelta colori: E' possibile impostare i colori dei simboli. Non è presente un pulsante submit in quanto non ho ritenuto necessaria questa aggiunta. 
 
 
 
