@@ -28,7 +28,7 @@ Nella cartella css si trova il file .css, per ora molto grezzo, struttura solo l
 Nella cartella components, come suggerisce il nome, ci sono all'interno tutte le componenti del programma.
 
 
-# Game.js: 
+ Game.js: 
 La classe padre, in cui setto lo stato iniziale composto da
 -History: un buffer che tiene in memoria tutte le fasi della partita, composto da, squares(array di 9 elementi) e background-color(array di 9 elementi che tiene il backgound-color di 			 squares)
 -stepNumber: una varibiale che tiene conto dell'avanzamento della partita, inizializzata a 0
@@ -42,7 +42,7 @@ Nel render vi sono le seguenti componenti:
 - Radio button che richiama la funzione handleSubmit presente in './functions.js'
 
 
-# Board.js: 
+ Board.js: 
 Una classe che si occupa di formare il campo(9 quadrati)
 Nel render richiamo una funzione che per ogni "quadrato" creato si occupa di passare dei paramentre a <Square />, nello specifico:
 -value: value corrente del simbolo che viene preso da squares ricevuto da Game
@@ -50,7 +50,7 @@ Nel render richiamo una funzione che per ogni "quadrato" creato si occupa di pas
 -color: colore corrente del simbolo
 
 
-# functions.js: 
+ functions.js: 
 sono presenti tutte le funzioni che utilizzo per far funzionare il programma.		
 	    
 -calculateWinner: Riceve come paramentro di input la fase corrente di gioco (squares) e controlla se c'è un vincitore. La variabile di controllo consiste in un array in cui si sono
@@ -67,7 +67,7 @@ In base al colore ricevuto dal radio button il checked cambia il suo valore risp
 
 
 
-## Come funziona:
+Come funziona:
 Ituitivamente è molto facile in quanto si rifà al famoso gioco tictactoe. La schermata principale è composta da status, campo , storia e scelta dei colori.	
 -Status: viene visualizzato il turno dei giocatori, quando un giocatore vince il simbolo del giocatore e la scritta Premi reset nella situazione di stallo.
 -Campo: viene visualizzato il campo vero e proprio, attraverso un click in uno dei quadrati viene posto un simbolo X,O dipendentemente dal turno. In caso ci sia un vincitore vengono illuminate
