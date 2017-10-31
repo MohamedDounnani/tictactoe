@@ -48,8 +48,7 @@ Nel render richiamo una funzione che per ogni "quadrato" creato si occupa di pas
 - color: colore corrente del simbolo
 
 
-functions.js: sono presenti tutte le funzioni che utilizzo per far funzionare il programma.		
-	    
+Functions.js: sono presenti tutte le funzioni che utilizzo per far funzionare il programma.	    
 - calculateWinner: Riceve come paramentro di input la fase corrente di gioco (squares) e controlla se c'è un vincitore. La variabile di controllo consiste in un array in cui si sono
 tutti i possibili esiti di vittoria. Se nella fase corrente è presente un esito viene salvato in un'altro array insieme al simbolo vincente e viene mandato in output 
 quest'ultimo.		 
@@ -76,14 +75,14 @@ le mosse vincenti.
 
 ## Come installarla:
 Clonare la cartella -> aprire il terminale e digitare i seguenti comandi:
--yarn init 
--yarn add react react-dom.
+- yarn init 
+- yarn add react react-dom.
 
 
 
 ## Come avviarla:
 Sempre da terminale digitare il seguente comando:
--yarn start facendo attenzione a non avere la porta 3000 occupata
+- yarn start facendo attenzione a non avere la porta 3000 occupata
 Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app. 
 	
  
