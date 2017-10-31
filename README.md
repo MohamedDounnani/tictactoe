@@ -35,7 +35,8 @@ Dev:
 		-checked : una variabile stringa in cui memorizzo il colore dei simboli, inizializzato a black che è il colore di default  
 	
 		Nel render vi sono le seguenti componenti:
-				  - status, una variabile che si aggiorna dipendentemente dalla situazione. Segnala il turno dei giocatori, il vincitore o la situazione di stallo. Attraverso delle 					    opportune verifiche
+				  - status, una variabile che si aggiorna dipendentemente dalla situazione. Segnala il turno dei giocatori, il vincitore o la situazione di stallo. 
+					Attraverso delle opportune verifiche
 				  - Board (componente figlio) e gli passo dei parametri, Squares, color e checked.
 				  - Button reset che richiama la funzione restartGame presente in './functions.js'
 				  - Radio button che richiama la funzione handleSubmit presente in './functions.js'
@@ -58,7 +59,7 @@ Dev:
 			  
 		-restartGame: Riceve come paramentro l'istanza corrente e si occupa semplicemente di settare lo stato alle condizioni iniziali. Viene triggerato dal Reset button
 	
-		-handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente all'interno   				del Board. In una situazione in cui l'utente clicca su un quadrato già occupato da un simbolo non succede nulla in quanto non è permesso modificare le mosse.
+		-handleClick: Riceve come paramentro la posizione corrente(il quadrato visualizzato nella web app) e si occupa come suggerisce il nome di gestire i click fatti dall'utente 					all'interno del Board. In una situazione in cui l'utente clicca su un quadrato già occupato da un simbolo non succede nulla in quanto non è permesso modificare le mosse.
 			      In una situazione di vittoria non è possibile proseguire. Inoltre ad ogni click, il buffer History ingloba la nuova fase della partita.
 	
 		-jumpTo: Riceve come paramentro iniziale la fase della partita desiderata e si occupa di far vedere attraverso una modifica dello stato, la fase desiderata.
@@ -78,12 +79,16 @@ Come funziona:
 	
 	-Scelta colori: E' possibile impostare i colori dei simboli. Non è presente un pulsante submit in quanto non ho ritenuto necessaria questa aggiunta. 
 
+
 Come installarla:
+
 	Clonare la cartella -> aprire il terminale e digitare i seguenti comandi:
 			       -yarn init 
 			       -yarn add react react-dom.
 
+
 Come avviarla:
+
 	Sempre da terminale digitare il seguente comando:
 		-yarn start facendo attenzione a non avere la porta 3000 occupata
 	Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app. 
