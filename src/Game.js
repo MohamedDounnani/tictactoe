@@ -89,7 +89,7 @@ class Game extends React.Component {
           disabled={disable} >Reset game</button></ol>
           </div>
           <div>
-          Scegli il colore:
+          Choose Color:
         <Radio checked={this.state.checked}
                onChange={(changeEvent) => handleChange(changeEvent,this)}
                submit={(formSubmitEvent) => this.handleSubmit(formSubmitEvent)}
