@@ -48,5 +48,5 @@ Sempre da terminale digitare il seguente comando:
 - yarn start (facendo attenzione a non avere la porta 3000 occupata. Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app)
 
 
-# Nota bene :
+# Nota bene:
 - E' possibile che su schermi diversi non si veda bene in quando non ho ancora implementate il ridimensionamento dello schermo
