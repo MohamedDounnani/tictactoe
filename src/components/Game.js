@@ -46,7 +46,7 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const background_color = current.background_color;
     const winner = calculateWinner(current.squares);
-    let full = false; //variabile che tiene in memoria quanti squares sono riempiti
+    let full = false; //variabile booleana che diventa true se tutti gli square sono diversi da null
     let disable = true; //variabile per attivare o disattivare il button
     let status; //variabile per cambiare lo status
     const moves = history.map((object,move) =>{
@@ -58,15 +58,15 @@ class Game extends React.Component {
       </li>
     );
     });
-    /*
-    Se tutti gli square sono diversi da null restituisce 9
-    */
     /*for(let i =0 ; i<length; i++){
 
       if(current.squares[i]!=null){
         full += 1;
       }
     }*/
+    /*
+    Quando tutti gli squares saranno diversi da null diventa true
+    */
     if(!current.squares.includes(null)){
       full = true;
     }
@@ -92,9 +92,7 @@ class Game extends React.Component {
 
     return (
       <div className="game">
-
       <div><h1 className="titolo">{titolo}</h1></div>
-
         <div className="board">
           <div className="color">
             <div><div className="choose_color">Choose Color:</div>
