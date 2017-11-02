@@ -43,15 +43,10 @@ Clonare la cartella -> aprire il terminale e digitare i seguenti comandi:
 - yarn init
 - yarn add react react-dom
 
-## Caricare i file css
-- Recarsi sulla cartella /src e lanciare il comando "stylus style -o css"
-
 ## Come avviarla:
 Sempre da terminale digitare il seguente comando:
 - yarn start (facendo attenzione a non avere la porta 3000 occupata. Successivamente si aprirà automaticamente il browser all'inidirizzo localhost:3000 in cui è presente la web app)
 
-## Se non si dispone dei file .css occorre installare stylus e lanciare il seguente comando:
--stylus style -o ./css
 
 # Nota bene :
 - E' possibile che su schermi diversi non si veda bene in quando non ho ancora implementate il ridimensionamento dello schermo
