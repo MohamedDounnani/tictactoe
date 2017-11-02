@@ -46,8 +46,7 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const background_color = current.background_color;
     const winner = calculateWinner(current.squares);
-    const length = current.squares.length;
-    let full = 0; //variabile che tiene in memoria quanti squares sono riempiti
+    let full = false; //variabile che tiene in memoria quanti squares sono riempiti
     let disable = true; //variabile per attivare o disattivare il button
     let status; //variabile per cambiare lo status
     const moves = history.map((object,move) =>{
@@ -62,10 +61,14 @@ class Game extends React.Component {
     /*
     Se tutti gli square sono diversi da null restituisce 9
     */
-    for(let i =0 ; i<length; i++){
+    /*for(let i =0 ; i<length; i++){
+
       if(current.squares[i]!=null){
         full += 1;
       }
+    }*/
+    if(!current.squares.includes(null)){
+      full = true;
     }
     /*
     Se c'è un vincitore le mosse vincenti si illuminano
@@ -75,15 +78,15 @@ class Game extends React.Component {
         background_color[winner[0][i]] = "green";
       }
       disable  = false;
-      status = 'The winner is: ' + winner[1][0] ;
+      status = `The winner is: ${winner[1][0]}`;
     }
     else {
-      if(full===length){
+      if(full){
         disable = false;
         status = "Premi Reset";
       }
       else{
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : '0');
+      status = `Next player: ${(this.state.xIsNext ? 'X' : '0')}`;
       }
     }
 
@@ -119,5 +122,6 @@ class Game extends React.Component {
     );
   }
 }
+
 
 export default Game;

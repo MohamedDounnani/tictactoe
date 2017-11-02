@@ -10,14 +10,13 @@
     -ms-user-select: none
     user-select: none
 
-
-/* Hide the browser's default checkbox */
 .container input
     position: absolute
     opacity: 0
 
 
 /* Create a custom checkbox */
+
 .checkmark
     position: absolute
     top: 0
@@ -29,12 +28,16 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark
-    background-color: #ccc
+    background-color: grey
 
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark
-    background-color: #2196F3
+.container.blue input:checked ~ .checkmark
+    background-color: blue
+.container.red input:checked ~ .checkmark
+    background-color: red
+.container.black input:checked ~ .checkmark
+    background-color: black
 
 
 /* Create the checkmark/indicator (hidden when not checked) */
