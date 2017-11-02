@@ -1,9 +1,17 @@
 .board {
   margin-top: 5%;
-  display: flex;
+  display : flex;
   flex-direction: row;
+  page-break-inside: auto;
 }
-
+.game-board {
+  float: left;
+  width: 50%
+}
+.game-info {
+  float : left;
+  width: 25%
+}
 .board-row:after {
   clear: both;
   content: "";
@@ -13,4 +21,8 @@
 .choose_color {
   font-size: 16px;
   margin-bottom: 20px;
+}
+.color {
+  float: left;
+  width: 50%;
 }
