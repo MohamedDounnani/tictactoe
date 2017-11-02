@@ -1,0 +1,43 @@
+transition_time = 0.4s;
+opacity = 0.6;
+font_size = 18px;
+body
+  font: font_size "Century Gothic", Futura, sans-serif
+  margin: 20px
+  background-color: grey
+
+ol,
+ul
+  padding-left: 80px
+  padding-right: 80px
+
+
+h1.titolo
+  font-size: 300%
+  margin-left: 28%
+
+.status
+  margin-bottom: 30px
+  font-size: font_size
+
+.button
+  background-color: white
+  border: 2px solid #4CAF50
+  color: black
+  padding: 16px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: font_size
+  margin: 4px 2px
+  -webkit-transition-duration: transition_time
+  transition-duration: transition_time
+  cursor: pointer
+
+.button:hover
+    background-color: green
+    color: white
+
+.button:disabled
+    opacity: opacity
+    cursor: not-allowed

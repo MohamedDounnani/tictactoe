@@ -3,6 +3,9 @@ La classe padre, in cui setto lo stato iniziale ed invio i paramentri necessari 
 */
 import React from 'react';
 import '../css/index.css';
+import '../css/radio.css';
+import '../css/board.css';
+import '../css/square.css';
 import Board from './Board.js'
 import {calculateWinner,
         restartGame,
@@ -38,6 +41,7 @@ class Game extends React.Component {
   }*/
 
   render() {
+    const titolo="Welcome to the TicTacToe Game";
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const background_color = current.background_color;
@@ -51,7 +55,7 @@ class Game extends React.Component {
     'Go to game start';
     return (
       <li key={move}>
-      <button onClick={() => jumpTo(move,this)}>{desc}</button>
+      <button className="button" onClick={() => jumpTo(move,this)}>{desc}</button>
       </li>
     );
     });
@@ -84,30 +88,34 @@ class Game extends React.Component {
     }
 
     return (
-        <div className="game">
-        <div className="game-board">
-          <div className="status">{status}</div>
-          <Board
-          squares={current.squares}
-          onClick={(i) => handleClick(i,this)}
-           background_color={current.background_color}
-           color={this.state.color}/>
-        </div>
-        <div className="game-info">
+      <div className="game">
 
-          <ol>{moves}</ol>
-          <ol><button onClick={() => restartGame(this)}
-          disabled={disable} >Reset game</button></ol>
+      <div><h1 className="titolo">{titolo}</h1></div>
+
+        <div className="board">
+          <div className="radio">
+            <div><div className="choose_color">Choose Color:</div>
+              <Radio color={this.state.color}
+                onChange={(changeEvent) => handleChange(changeEvent,this)}
+                submit={(formSubmitEvent) => this.handleSubmit(formSubmitEvent)}/>
+            </div>
           </div>
-          <div>
-          Choose Color:
-        <Radio color={this.state.color}
-               onChange={(changeEvent) => handleChange(changeEvent,this)}
-               submit={(formSubmitEvent) => this.handleSubmit(formSubmitEvent)}
-        />
+          <div className="game-board">
+              <div className="status">{status}</div>
+              <Board
+                squares={current.squares}
+                onClick={(i) => handleClick(i,this)}
+                background_color={current.background_color}
+                color={this.state.color}/>
+          </div>
+          <div className="game-info">
+            <ol>{moves}</ol>
+            <ol><button className="button" onClick={() => restartGame(this)}
+            disabled={disable} >Reset game</button></ol>
+          </div>
+
           </div>
       </div>
-
     );
   }
 }

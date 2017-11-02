@@ -1,58 +1,40 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-
-  ol, ul {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-    width: 100px;
-  }
-
-  .status{
-    margin-bottom: 30px;
-    font-size : 18px;
-  }
-
-  .square {
-    background: #fff;
-    border: 1px solid black;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-    background-color: white
-
-  }
-
-  .square:focus {
-    outline: none;
-  }
-
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  .game-board{
-    padding: 10px;
-  }
-  .game-info {
-    margin-left: 20px;
-
-  }
+  font: 18px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-color: #808080;
+}
+ol,
+ul {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+h1.titolo {
+  font-size: 300%;
+  margin-left: 28%;
+}
+.status {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.button {
+  background-color: #fff;
+  border: 2px solid #4caf50;
+  color: #000;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #008000;
+  color: #fff;
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

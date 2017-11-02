@@ -5,27 +5,25 @@ import React from 'react';
 */
 
 class Radio extends React.Component{
-
-
   render(){
     return(
       <form /*onSubmit={this.props.submit}*/>
         <div className="radio">
-          <label>
-            <input type="radio" checked={this.props.color==="red"} value="red" onChange={this.props.onChange} />
-            Red
+          <label className="container">Red
+            <input type="checkbox" checked={this.props.color==="red"} value="red" onChange={this.props.onChange} />
+            <span class="checkmark"></span>
           </label>
         </div>
         <div className="radio">
-          <label>
-            <input type="radio" checked={this.props.color==="blue"} value="blue" onChange={this.props.onChange} />
-            Blue
+          <label className="container">Blue
+            <input type="checkbox" checked={this.props.color==="blue"} value="blue" onChange={this.props.onChange} />
+            <span class="checkmark"></span>
           </label>
         </div>
         <div className="radio">
-          <label>
-            <input type="radio" checked={this.props.color==="black"} value="black" onChange={this.props.onChange}/>
-            Black
+          <label className="container">Black
+            <input type="checkbox" checked={this.props.color==="black"} value="black" onChange={this.props.onChange}/>
+            <span class="checkmark"></span>
           </label>
         </div>
 
