@@ -43,7 +43,8 @@ Clonare la cartella -> aprire il terminale e digitare i seguenti comandi:
 - yarn init
 - yarn add react react-dom
 
-
+## Caricare i file css
+- Recarsi sulla cartella /src e lanciare il comando "stylus style -o css"
 
 ## Come avviarla:
 Sempre da terminale digitare il seguente comando:
@@ -53,4 +54,4 @@ Sempre da terminale digitare il seguente comando:
 -stylus style -o ./css
 
 # Nota bene :
--E' possibile che su schermi diversi non si veda bene in quando non ho ancora implementate il ridimensionamento dello schermo
+- E' possibile che su schermi diversi non si veda bene in quando non ho ancora implementate il ridimensionamento dello schermo
