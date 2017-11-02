@@ -96,7 +96,7 @@ class Game extends React.Component {
       <div><h1 className="titolo">{titolo}</h1></div>
 
         <div className="board">
-          <div className="radio">
+          <div className="color">
             <div><div className="choose_color">Choose Color:</div>
               <Radio color={this.state.color}
                 onChange={(changeEvent) => handleChange(changeEvent,this)}
